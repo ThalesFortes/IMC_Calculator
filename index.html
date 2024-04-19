@@ -3,36 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>IMC Calculator</title>
-  <link rel="stylesheet" src="./src/css/style.css"/>
+  <link rel="stylesheet" href="./src/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="./src/js/main.js" defer></script>
 </head>
 <body>
-  <main>
     <div class="container">
-      <section>
-        <h1 class="title">
-          Cálculo de IMC
-        </h1>
+      <main>
+        <h1 class="title">Cálculo de IMC</h1>
         <form>
-          <label for="wheight">
-            Peso (kg)
-          </label>
+          <label for="wheight">Peso (kg)</label>
           <input id="wheight"
             type="text"
             placeholder="60" 
           />
-          <label for="height">
-            Altura (m)
-          </label>
+
+          <label for="height">Altura (m)</label>
           <input id="height"
             type="text"
             placeholder="165" 
           />
-          <button>Calcular IMC <img src="./src/assets/Buttons.svg" alt="Seta indicando para clicar"></button>
+          <button type="submit">
+            Calcular IMC 
+            <img src="./src/assets/Buttons.svg" alt="Seta indicando para clicar">
+          </button>
         </form>
-      </section>
+      </main>
     </div>
-  </main>
 </body>
 </html>
