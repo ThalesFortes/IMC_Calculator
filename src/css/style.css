@@ -1,11 +1,6 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 :root{
-  font-size: 62.5%;
   --bg-body:#040924;
 
   --tt-heading:rgb(12, 52, 64);
@@ -15,13 +10,14 @@
   --ot-input:#02799D;
   --bd-input:rgba(73, 80, 87, 0.3);
   --tt-placeholder:rgba(73, 80, 87, 0.5);
+  --bg-input:#DCE2E9;
 
+  --sat:97%;
   --tt-button:#FFFFFF;
-  --bg-button:#02799D;
+  --bg-button:hsl(194, var(--sat), 31%);
 
   --bg-error:#F03E3E;
   --tt-error:white;
-  
 }
 
 body{
@@ -33,6 +29,7 @@ body,
 input,
 button{
   font-size: 1.6rem;
+  border: none;
 }
 
 .container{
@@ -43,11 +40,61 @@ button{
 
 main{
   background: #FFF;
-  width: 43rem;
-  margin-inline: center;
+  width: min(43rem,90%);
+  margin: auto;
+  padding: 4.8rem 6.4rem 6.4rem ;
+  border-radius:.6rem;
 }
 
-input{
+.title{
+  color: var(--tt-heading);
+  margin-bottom: 3.2rem;
+  line-height: 4rem;
+  font-size: 3.2rem;
+}
+
+.inputWrapper label{
+  color: var(--tt-label);
+}
+
+.inputWrapper  + .inputWrapper {
+ margin-top: 1.6rem;
+}
+
+.inputWrapper input{
   width: 100%;
+  color: var(--tt-input);
+  border: 1px solid rgba(73, 80, 87, 0.30);
+  margin-top: .8rem;
+  padding: 1.6rem;
+  border-radius: .4rem;
+  background-color:var(--bg-input);
 }
 
+input:focus{
+  outline: 2px solid var(--ot-input);
+}
+
+.inputWrapper input::placeholder{
+  color: var(--tt-placeholder);
+}
+
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-button);
+  width: 100%;
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  color: var(--tt-button);
+  font-weight: 700;
+  line-height: 2rem;
+  border-radius: .4rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+button:hover{
+  background-color: hsl(194, calc(var(--sat) - 32%), 22%);
+}
