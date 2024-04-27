@@ -22,13 +22,13 @@
 
 body{
   background-color:var(--bg-body);
-  font-family: "Roboto", sans-serif;
 }
 
 body,
 input,
 button{
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
   border: none;
 }
 
