@@ -1,6 +1,7 @@
-function calculateIMC(weight, height){
-  let imc = (( height * height ) /weight )
-  return imc
+export function calculateIMC(wheight, height){
+  return (( height * height ) /wheight )
 }
 
-export {calculateIMC}
+export function notANumber(value){
+  return isNaN(value) || value == ""
+}
