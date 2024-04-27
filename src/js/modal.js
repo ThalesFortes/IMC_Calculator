@@ -1,14 +1,27 @@
-
-
 const Modal = {
-  height: document.querySelector("#height"),
-  wheight: document.querySelector("#wheight"),
-  open (){
-    document.querySelector(".modal_wrapper").classList.add('open')
+  wrapper : document.querySelector(".modal_wrapper"),
+  buttonClose: document.querySelector(".modal_wrapper button.close"),
+  messages: document.querySelector(".modal_wrapper .title"),
+  open (value){
+    message(value)
+    openModal()
   },
   close(){
-    modalWrapper.classList.remove('open')
+    closeModal()
   }
+}
+
+
+function openModal() {
+  Modal.wrapper.classList.add('open')
+}
+
+function closeModal() {
+  Modal.buttonClose.onclick = () => {Modal.wrapper.classList.remove('open')}
+}
+
+function message(value){
+  Modal.messages.innerText = `Seu IMC é de ${value}`
 }
 
 export {Modal}

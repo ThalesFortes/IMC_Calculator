@@ -113,7 +113,7 @@ form button:hover{
 
   display: grid;
   place-content: center;
-
+  
   opacity: 0;
   visibility: hidden;
 }
@@ -125,10 +125,13 @@ form button:hover{
   border-radius: .6rem;
 }
 
+.modal_wrapper .modal .title{
+  text-align: center;
+}
+
 .modal button{
   background:none;
   border: none;
-
   position: absolute;
   top:1.6rem;
   right:1.6rem;
@@ -136,12 +139,14 @@ form button:hover{
   cursor: pointer;
 }
 
+
 .close img{
-  transition: ease .5s;
+  border: none;
+  transition: ease .2s;
 }
 
 .close img:hover{
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 

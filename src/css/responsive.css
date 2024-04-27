@@ -6,4 +6,11 @@
   .title{
     margin-bottom: 2.5rem;
   }
+
+  .modal{
+    position: relative;
+    background: #FFF;
+    padding: 4.4rem 3.2rem 2.2rem;
+    border-radius: .6rem;
+  }
 }
